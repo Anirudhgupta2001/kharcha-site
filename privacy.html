@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kharcha privacy policy</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>Privacy policy</h1>
+<p class="muted">Last updated 15 October 2026</p>
+
+<p>Kharcha is a personal app used only by its owner. This policy explains what it does with Google user data.</p>
+
+<h2>What Kharcha accesses</h2>
+<ul>
+<li>Kharcha asks for read-only Gmail access (<code>gmail.readonly</code>) and your email address.</li>
+<li>It reads only transaction alert emails from the owner's banks and card issuers: HDFC Bank, SBI Card and HSBC.</li>
+<li>It never sends, deletes or changes email.</li>
+</ul>
+
+<h2>How the data is used</h2>
+<ul>
+<li>From each alert, Kharcha extracts the amount, merchant, date and the account's last four digits.</li>
+<li>These are stored as a transaction in the owner's own private database (Supabase, Mumbai region), protected by row-level security.</li>
+<li>The data is used only to show the owner his own spending, budgets and notifications.</li>
+</ul>
+
+<h2>Sharing</h2>
+<ul>
+<li>When an alert can't be read by Kharcha's built-in rules, a masked copy of its text is sent to Anthropic's Claude API to extract the transaction. Names, email addresses, account numbers and similar identifiers are removed first.</li>
+<li>Gmail data is not sold, not used for advertising, and not shared with anyone else.</li>
+</ul>
+
+<h2>Storage and deletion</h2>
+<ul>
+<li>The Gmail access token is stored encrypted (Supabase Vault).</li>
+<li>Email bodies are not stored. Only the extracted transaction details are kept.</li>
+<li>Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li>Deleting the account removes all stored data.</li>
+</ul>
+
+<h2>Google API Services User Data Policy</h2>
+<p>Kharcha's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:anirudhgupta.hsr@gmail.com">anirudhgupta.hsr@gmail.com</a></p>
+</main></body>
+</html>
